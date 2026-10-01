@@ -1,0 +1,1 @@
+Real-Time PPE and Safety Violation Detection in Industrial Environments using Deep Learning. A comparative study of YOLOv6, YOLOv7, YOLOv8, and YOLOv10 for helmet, safety vest, and PPE compliance detection using industrial CCTV/video data.
