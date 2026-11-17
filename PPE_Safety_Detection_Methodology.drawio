@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2026-03-30T00:00:00.000Z" agent="Mozilla/5.0" version="24.0.0" etag="ppe-safety-methodology" type="device">
+  <diagram id="methodology-flow" name="PPE and Safety Violation Detection Methodology">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- Title / Header Container -->
+        <mxCell id="title" value="&lt;b&gt;&lt;font style=&quot;font-size: 18px;&quot; color=&quot;#1e293b&quot;&gt;Methodology Flowchart: PPE and Safety Violation Detection Using Deep Learning&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="60" y="30" width="900" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- STAGE 1: Dataset -->
+        <mxCell id="box_stage1" value="&lt;b&gt;Stage 1 — Dataset&lt;/b&gt;&lt;hr&gt;&amp;bull; Total Images: 44,001&lt;br&gt;&amp;bull; Classes: 14&lt;br&gt;&amp;bull; Categories: PPE, compliance, non-compliance &amp;amp; safety events" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#cbd5e1;fontColor=#0f172a;align=left;spacingLeft=10;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="100" width="200" height="130" as="geometry" />
+        </mxCell>
+
+        <!-- Connector 1 to 2 -->
+        <mxCell id="conn_1_2" value="" style="endArrow=classic;html=1;rounded=0;strokeColor=#475569;strokeWidth=2;" edge="1" parent="1" source="box_stage1" target="box_stage2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="300" y="250" as="sourcePoint" />
+            <mxPoint x="350" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- STAGE 2: Data Preparation -->
+        <mxCell id="box_stage2" value="&lt;b&gt;Stage 2 — Data Preparation&lt;/b&gt;&lt;hr&gt;&amp;bull; Training: 30,765 images&lt;br&gt;&amp;bull; Validation: 8,813 images&lt;br&gt;&amp;bull; Testing: 4,423 images&lt;br&gt;&amp;bull; Structured Dataset Split" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#cbd5e1;fontColor=#0f172a;align=left;spacingLeft=10;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="310" y="100" width="200" height="130" as="geometry" />
+        </mxCell>
+
+        <!-- Connector 2 to 3 -->
+        <mxCell id="conn_2_3" value="" style="endArrow=classic;html=1;rounded=0;strokeColor=#475569;strokeWidth=2;" edge="1" parent="1" source="box_stage2" target="box_stage3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="550" y="250" as="sourcePoint" />
+            <mxPoint x="600" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- STAGE 3: Comparative Detector Setup -->
+        <mxCell id="box_stage3" value="&lt;b&gt;Stage 3 — Comparative Detector Setup&lt;/b&gt;&lt;hr&gt;&amp;bull; Detector Run A&lt;br&gt;&amp;bull; Detector Run B&lt;br&gt;&amp;bull; Same dataset &amp;amp; evaluation protocol for both runs" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#cbd5e1;fontColor=#0f172a;align=left;spacingLeft=10;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="100" width="210" height="130" as="geometry" />
+        </mxCell>
+
+        <!-- Connector 3 to 4 -->
+        <mxCell id="conn_3_4" value="" style="endArrow=classic;html=1;rounded=0;strokeColor=#475569;strokeWidth=2;" edge="1" parent="1" source="box_stage3" target="box_stage4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="800" y="250" as="sourcePoint" />
+            <mxPoint x="850" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- STAGE 4: Model Training -->
+        <mxCell id="box_stage4" value="&lt;b&gt;Stage 4 — Model Training&lt;/b&gt;&lt;hr&gt;&amp;bull; Train each detector independently&lt;br&gt;&amp;bull; Monitor training &amp;amp; validation performance" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#cbd5e1;fontColor=#0f172a;align=left;spacingLeft=10;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="820" y="100" width="200" height="130" as="geometry" />
+        </mxCell>
+
+        <!-- Connector 4 to 5 -->
+        <mxCell id="conn_4_5" value="" style="endArrow=classic;html=1;rounded=0;strokeColor=#475569;strokeWidth=2;" edge="1" parent="1" source="box_stage4" target="box_stage5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1050" y="250" as="sourcePoint" />
+            <mxPoint x="1100" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- STAGE 5: Evaluation -->
+        <mxCell id="box_stage5" value="&lt;b&gt;Stage 5 — Evaluation&lt;/b&gt;&lt;hr&gt;&amp;bull; Precision &amp;amp; Recall&lt;br&gt;&amp;bull; F1-score&lt;br&gt;&amp;bull; Mean Average Precision (mAP) [where available]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#cbd5e1;fontColor=#0f172a;align=left;spacingLeft=10;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="1070" y="100" width="200" height="130" as="geometry" />
+        </mxCell>
+
+        <!-- Connectors from Stage 5 to 6A and 6B (Branching downwards) -->
+        <mxCell id="conn_5_6a" value="" style="endArrow=classic;html=1;rounded=0;strokeColor=#475569;strokeWidth=2;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="box_stage5" target="box_stage6a">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1150" y="300" as="sourcePoint" />
+            <mxPoint x="1000" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="conn_5_6b" value="" style="endArrow=classic;html=1;rounded=0;strokeColor=#475569;strokeWidth=2;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="box_stage5" target="box_stage6b">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1200" y="300" as="sourcePoint" />
+            <mxPoint x="1250" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- STAGE 6A: Qualitative Analysis -->
+        <mxCell id="box_stage6a" value="&lt;b&gt;Stage 6A — Qualitative Analysis&lt;/b&gt;&lt;hr&gt;&amp;bull; Review validation predictions&lt;br&gt;&amp;bull; Inspect objects &amp;amp; confidence&lt;br&gt;&amp;bull; Identify strengths, missed &amp;amp; false detections" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#cbd5e1;fontColor=#0f172a;align=left;spacingLeft=10;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="930" y="310" width="200" height="130" as="geometry" />
+        </mxCell>
+
+        <!-- STAGE 6B: Metric and Curve Analysis -->
+        <mxCell id="box_stage6b" value="&lt;b&gt;Stage 6B — Metric &amp; Curve Analysis&lt;/b&gt;&lt;hr&gt;&amp;bull; Review confidence curves&lt;br&gt;&amp;bull; Compare recorded metrics&lt;br&gt;&amp;bull; Use actual experimental outputs" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#cbd5e1;fontColor=#0f172a;align=left;spacingLeft=10;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="1190" y="310" width="200" height="130" as="geometry" />
+        </mxCell>
+
+        <!-- Connectors from 6A and 6B to 7 -->
+        <mxCell id="conn_6a_7" value="" style="endArrow=classic;html=1;rounded=0;strokeColor=#475569;strokeWidth=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="box_stage6a" target="box_stage7">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1000" y="500" as="sourcePoint" />
+            <mxPoint x="1050" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="conn_6b_7" value="" style="endArrow=classic;html=1;rounded=0;strokeColor=#475569;strokeWidth=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="box_stage6b" target="box_stage7">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1250" y="500" as="sourcePoint" />
+            <mxPoint x="1150" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- STAGE 7: Comparative Analysis -->
+        <mxCell id="box_stage7" value="&lt;b&gt;Stage 7 — Comparative Analysis&lt;/b&gt;&lt;hr&gt;&amp;bull; Compare Detector Run A &amp;amp; Run B&lt;br&gt;&amp;bull; Discuss measured performance &amp;amp; limitations&lt;br&gt;&amp;bull; Evaluate practical suitability for PPE detection" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#cbd5e1;fontColor=#0f172a;align=left;spacingLeft=10;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="1045" y="520" width="240" height="130" as="geometry" />
+        </mxCell>
+
+        <!-- Connector 7 to Final Outcome -->
+        <mxCell id="conn_7_final" value="" style="endArrow=classic;html=1;rounded=0;strokeColor=#475569;strokeWidth=2;" edge="1" parent="1" source="box_stage7" target="box_final">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1150" y="680" as="sourcePoint" />
+            <mxPoint x="1150" y="730" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Final Outcome Box -->
+        <mxCell id="box_final" value="&lt;b&gt;&lt;font color=&quot;#ffffff&quot;&gt;Final Outcome&lt;/font&gt;&lt;/b&gt;&lt;hr&gt;&lt;font color=&quot;#f1f5f9&quot;&gt;“Evidence-Based Comparative Evaluation of PPE and Safety Violation Detection Models”&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0f172a;strokeColor=#334155;fontColor=#ffffff;align=center;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="1010" y="710" width="310" height="100" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
